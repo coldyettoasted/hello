@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iterative Design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fef6f9;
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Fixed title on the left */
+    .title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+      padding: 80px 30px;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 1.1;
+      white-space: pre-line;
+      color: #333;
+      background-color: #fef6f9;
+    }
+
+    /* Content area to the right of the fixed title */
+    .content {
+      margin-left: 300px;
+      padding: 60px 40px;
+      flex: 1;
+    }
+
+    .centered-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #ffe4ec;
+      padding: 50px 25px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .gif-block {
+      position: relative;
+      width: 100%;
+    }
+
+    .gif-inner {
+      position: relative;
+      width: 100%;
+      clip-path: inset(10px round 10px);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .gif-block img {
+      width: 100%;
+      display: block;
+      transition: filter 0.3s ease;
+      border-radius: 0;
+    }
+
+    .gif-block:hover img {
+      filter: blur(3px);
+    }
+
+    .caption {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 60%;
+      padding: 25px;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+      color: #333;
+      text-align: right;
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .caption p {
+      margin: 0;
+    }
+
+    .gif-block:hover .caption {
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px 0;
+        font-size: 2.5rem;
+        text-align: center;
+        background: none;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+
+    <div class="title">
+      Iterative<br>Design
+    </div>
+
+    <div class="content">
+      <div class="centered-container">
+        <div class="gallery">
+
+        <a href="week4FacePortrait/index.html">
+          <div class="gif-block">
+            <div class="gif-inner">
+                <img src="/gif/chrome-capture-2025-4-24.gif" alt="Funny Cat">
+              <div class="caption">
+                <p>This generative sketch forms a face using simple geometric shapes. The top-left rectangle and top-right triangle represent eyes that shift position and color in response to mouse movement.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="kaleidoscope/index.html">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="/gif/kaleidoscope.gif" alt="Kaleidoscope Loop">
+              <div class="caption">
+                <p>Adapted from a p5.js symmetry drawing example, this sketch introduces dynamic color and stroke thickness based on mouse position. The original radial symmetry logic remains, but the lines now shift in hue and weight depending on cursor location, creating a responsive, kaleidoscopic drawing experience unique to each interaction.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="CASCADE/index.html">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="/gif/cascade.gif" alt="Cascade">
+              <div class="caption">
+                <p>Based on the p5.js example “Animation with Events,” this sketch replaces the bouncing ball with a column of moving circles influenced by mouse position. Color shifts dynamically using HSB mode, and clicking toggles animation while displaying a fading farewell message during the first interaction.</p>
+              </div>
+            </div>
+          </div>
+          </a>
+
+          <a href="soundd/index.html">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="/gif/soundwave.gif" alt="Soundwave">
+              <div class="caption">
+                <p>Inspired by the “Wave” section from compform.net/sound, this sketch uses p5.FFT to visualize live microphone input. The waveform is drawn as a field of ellipses, with map() translating audio values into screen coordinates — a technique that mimics sensitivity and taught me how input ranges can be dynamically scaled for visual feedback.</p>
+              </div>
+            </div>
+          </div>
+          </a>
+          <a href="speech/index.html">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="/gif/speech.gif" alt="Speech Animation">
+              <div class="caption">
+                <p>This is the voice recognition sketch by Karen Ann, this code uses p5.SpeechRec to transcribe live speech into text. While I don't fully understand how all parts of the speech recognition API work yet, setting it up helped me begin to understand how external scripts and libraries are linked and used in an HTML  file through the index. It's a small but important step in grasping how browser-based interactivity works.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
