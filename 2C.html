@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Computing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f0f8f7;
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+      padding: 80px 30px;
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 1.1;
+      white-space: pre-line;
+      background-color: #f0f8f7;
+    }
+
+    .content {
+      margin-left: 300px;
+      padding: 60px 40px;
+      flex: 1;
+    }
+
+    .centered-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #d8f3ef;
+      padding: 50px 25px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .gif-block {
+      position: relative;
+      width: 100%;
+    }
+
+    .gif-inner {
+      position: relative;
+      width: 100%;
+      clip-path: inset(10px round 10px);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .gif-block img {
+      width: 100%;
+      display: block;
+      transition: filter 0.3s ease;
+      border-radius: 0;
+    }
+
+    .gif-block:hover img {
+      filter: blur(3px);
+    }
+
+    .caption {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 60%;
+      padding: 25px;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+      color: #333;
+      text-align: right;
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .caption p {
+      margin: 0;
+    }
+
+    .gif-block:hover .caption {
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px 0;
+        font-size: 2.5rem;
+        text-align: center;
+        background: none;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .caption {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+
+    <div class="title">
+      Physical<br>Computing
+    </div>
+
+    <div class="content">
+      <div class="centered-container">
+        <div class="gallery">
+
+        <a href="box.html">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Box/Box.JPEG" >
+              <div class="caption">
+                <p>We began this week by unboxing a kit filled with physical computing components: an Arduino Uno, pre-soldered and regular H-bridges, a joystick, solderless breadboards, a temperature sensor, and more. This hands-on introduction laid the groundwork for prototyping and hardware experimentation.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="Blink.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="Blink/Blink.JPEG" >
+                <div class="caption">
+                  <p>Blink! Our first Arduino Workshoip.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          </a>
+          <a href="Potentio.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="Potentiometer/Potentiometer.JPEG" >
+                <div class="caption">
+                  <p>This circuit builds on the Blink test by introducing a potentiometer.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="Ultrasonic.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="ultrasonic/Ultrasonic.JPEG" >
+                <div class="caption">
+                  <p>Ultrasonic Buzzer</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="Stress.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="sketches/fidgetstress.jpg" >
+                <div class="caption">
+                  <p>Concept Sketch: Stress spinner</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="Snooze.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="sketches/snooze.jpg" >
+                <div class="caption">
+                  <p>Concept Sketch: Snooze Excuse</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Add more blocks below -->
+          <!--
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="gif/your-next-image.gif" alt="Your Alt Text">
+              <div class="caption">
+                <p>Your description here...</p>
+              </div>
+            </div>
+          </div>
+          -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

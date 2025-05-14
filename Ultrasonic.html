@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultrasonic Buzzer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #eef6fc; /* Light blue background */
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+      padding: 80px 30px;
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 1.1;
+      white-space: pre-line;
+      background-color: #eef6fc;
+    }
+
+    .content {
+      margin-left: 300px;
+      padding: 60px 40px;
+      flex: 1;
+    }
+
+    .centered-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #d3eafc; /* Blue content block */
+      padding: 50px 25px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .centered-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .caption {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 900px) {
+      .title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px 0;
+        font-size: 2.5rem;
+        text-align: center;
+        background: none;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+    <div class="title">
+      Ultrasonic<br>Buzzer
+    </div>
+
+    <div class="content">
+      <div class="centered-container">
+        <img src="ultrasonic/Ultrasonicdiagram.png" >
+        <div class="caption">
+          <p>This circuit uses an ultrasonic sensor to measure distance. When something gets close, the buzzer reacts by making sound. It was our first time using a sensor to control sound based on real-world movement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
