@@ -19,6 +19,8 @@
     .layout {
       display: flex;
       min-height: 100vh;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
 
     .title {
@@ -71,9 +73,9 @@
 
     .gif-block img {
       width: 100%;
+      height: auto;
       display: block;
       transition: filter 0.3s ease;
-      border-radius: 0;
     }
 
     .gif-block:hover img {
@@ -112,7 +114,7 @@
         position: relative;
         width: 100%;
         height: auto;
-        padding: 40px 20px 0;
+        padding: 30px 20px 0;
         font-size: 2.5rem;
         text-align: center;
         background: none;
@@ -144,79 +146,71 @@
       <div class="centered-container">
         <div class="gallery">
 
-        <a href="box.html">
-          <div class="gif-block">
-            <div class="gif-inner">
-              <img src="Box/Box.JPEG" >
-              <div class="caption">
-                <p>We began this week by unboxing a kit filled with physical computing components: an Arduino Uno, pre-soldered and regular H-bridges, a joystick, solderless breadboards, a temperature sensor, and more. This hands-on introduction laid the groundwork for prototyping and hardware experimentation.</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="Blink.html">
+          <a href="box.html">
             <div class="gif-block">
               <div class="gif-inner">
-                <img src="Blink/Blink.JPEG" >
+                <img src="Box/Box.JPEG" alt="Component Box">
                 <div class="caption">
-                  <p>Blink! Our first Arduino Workshoip.</p>
-                </div>
-              </div>
-            </div>
-          </a>
-          </a>
-          <a href="Potentio.html">
-            <div class="gif-block">
-              <div class="gif-inner">
-                <img src="Potentiometer/Potentiometer.JPEG" >
-                <div class="caption">
-                  <p>This circuit builds on the Blink test by introducing a potentiometer.</p>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="Ultrasonic.html">
-            <div class="gif-block">
-              <div class="gif-inner">
-                <img src="ultrasonic/Ultrasonic.JPEG" >
-                <div class="caption">
-                  <p>Ultrasonic Buzzer</p>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="Stress.html">
-            <div class="gif-block">
-              <div class="gif-inner">
-                <img src="sketches/fidgetstress.jpg" >
-                <div class="caption">
-                  <p>Concept Sketch: Stress spinner</p>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="Snooze.html">
-            <div class="gif-block">
-              <div class="gif-inner">
-                <img src="sketches/snooze.jpg" >
-                <div class="caption">
-                  <p>Concept Sketch: Snooze Excuse</p>
+                  <p>We began this week by unboxing a kit filled with physical computing components: an Arduino Uno, H-bridges, joystick, breadboards, sensors, and more.</p>
                 </div>
               </div>
             </div>
           </a>
 
-          <!-- Add more blocks below -->
-          <!--
-          <div class="gif-block">
-            <div class="gif-inner">
-              <img src="gif/your-next-image.gif" alt="Your Alt Text">
-              <div class="caption">
-                <p>Your description here...</p>
+          <a href="Blink.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="Blink/Blink.JPEG" alt="Blink Circuit">
+                <div class="caption">
+                  <p>Blink! Our first Arduino workshop — a simple blinking LED circuit.</p>
+                </div>
               </div>
             </div>
-          </div>
-          -->
+          </a>
+
+          <a href="Potentio.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="Potentiometer/Potentiometer.JPEG" alt="Potentiometer Circuit">
+                <div class="caption">
+                  <p>This circuit builds on the Blink test by introducing a potentiometer to control LED brightness.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="Ultrasonic.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="ultrasonic/Ultrasonic.JPEG" alt="Ultrasonic Buzzer">
+                <div class="caption">
+                  <p>This ultrasonic sensor circuit triggers a buzzer when something gets close.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="Stress.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="sketches/fidgetstress.jpg" alt="Fidget Spinner Concept">
+                <div class="caption">
+                  <p>Concept Sketch: A stress input machine that prescribes spinner rotations based on how overwhelmed you feel.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="Snooze.html">
+            <div class="gif-block">
+              <div class="gif-inner">
+                <img src="sketches/snooze.jpg" alt="Snooze Concept">
+                <div class="caption">
+                  <p>Concept Sketch: An alarm clock that prints a ChatGPT-generated excuse when you hit snooze.</p>
+                </div>
+              </div>
+            </div>
+          </a>
 
         </div>
       </div>
