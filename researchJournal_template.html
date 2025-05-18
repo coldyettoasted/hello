@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Journal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f0f8f7;
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+      padding: 80px 30px;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.1;
+      background-color: #f0f8f7;
+    }
+
+    .content {
+      margin-left: 300px;
+      padding: 60px 40px;
+      flex: 1;
+    }
+
+    .centered-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #d8f3ef;
+      padding: 50px 25px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .gif-block {
+      position: relative;
+      width: 100%;
+    }
+
+    .gif-inner {
+      position: relative;
+      width: 100%;
+      clip-path: inset(10px round 10px);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .gif-block img {
+      width: 100%;
+      display: block;
+      transition: filter 0.3s ease;
+    }
+
+    .gif-block:hover img {
+      filter: blur(3px);
+    }
+
+    .caption {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 60%;
+      padding: 25px;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+      color: #333;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .caption h2 {
+      margin: 0 0 0.5em;
+      font-size: 1.2em;
+    }
+
+    .caption p {
+      margin: 0;
+      font-size: 0.95em;
+    }
+
+    .gif-block:hover .caption {
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px 0;
+        font-size: 2.5rem;
+        text-align: center;
+        background: none;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .caption {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="title">Research<br>Journal</div>
+    <div class="content">
+      <div class="centered-container">
+        <div class="gallery">
+          
+        <a href="https://www.zombo.com/" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/Zombo.png" alt="Zombo.com">
+              <div class="caption">
+                <h2>Zombo.com</h2>
+                <p>Zombo.com features a colorful pulsing dandelion, a repeated sound loop that goes  ‘Welcome to Zombo.com, where everything is possible,’ and no content whatsoever. It’s like a parody on Flash-era splash pages.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://fff.cmiscm.com/#!/main" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/fff.png" alt="Form Follows Function, n.d.">
+              <div class="caption">
+                <h2>Form Follows Function, n.d.</h2>
+                <p>An interesting showcase of interesting experiments made with HTML5 and CSS3 without any reliance on JS. It features experiments  like growing trees and 3D transformations.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://bruno-simon.com/" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/Bruno.png" alt="Bruno Simon Portfolio, 2019~Present">
+              <div class="caption">
+                <h2>Bruno Simon Portfolio, 2019~Present</h2>
+                <p>In this interesting, playful and interactive web page, Bruno Simon, a French developer, explains his works with the help of a toy truck he has converted into a virtual space. Objects and ramps are used, collisions are necessary to enter different spaces that show his work. The web site is made in Three.js, a gaming web technology that works directly in the browser.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://zimjs.com/cat/generator.html" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/zim.png" alt="Generative Drawing Tool, ZIM JavaScript Framework, n.d.">
+              <div class="caption">
+                <h2>Generative Drawing Tool, ZIM JavaScript Framework, n.d.</h2>
+                <p>Using the ZIM JavaScript framework (inspired by p5.js/Processing), this drawing tool allows users to create mirrored kaleidoscopic cat images through real-time cursor-based interaction and rotational symmetry.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://codepen.io/juliangarnier/pen/krNqZO" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/Solar.png" alt="Generative Animation, HTML & CSS Only, 2013">
+              <div class="caption">
+                <h2>Generative Animation, HTML & CSS Only, 2013</h2>
+                <p>This animation shows Our planets in the solar system revolving  around the sun. It is made entirely using html and css. All the planets move smoothly and evenly in a circular orbit, creating a meditative rhythm, a sense of calm, a sense of symmetry, order and repetition.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://cutecircuit.com/hugshirt/" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/hugshirt-show-1.jpg" alt="The Hug Shirt by CuteCircuit, 2004~Present">
+              <div class="caption">
+                <h2>The Hug Shirt by CuteCircuit, 2004~Present</h2>
+                <p>The hug shirt is a shirt, designed by fashion tech company CuteCircuit, which allows you to send and receive virtual hugs. Using the sensors and the actuators in the garment, it records the strength, location and duration of a hug, and, using Bluetooth and a smart phone, transmits the data to a second shirt, which recreates the hug and simulates the touch and warmth of the hug. It was one of the first examples of a garment which was designed to stimulate emotional connection.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://www.random-international.com/rain-room" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="https://interactiveimmersive.io/wp-content/uploads/2024/01/CleanShot-2024-01-28-at-14.48.15.gif" alt="Interactive Installation, Random International, 2012~Present">
+              <div class="caption">
+                <h2>Interactive Installation, Random International, 2012~Present</h2>
+                <p>Rain room is an installation where water falls continuously like rain, but motion sensors detect where the visitors stand and prevent the water from falling on them. This enables people to walk through the rain without getting wet, creating a surreal and overwhelming experience. This room investigates the relationship between human presence and machine-driven environments, blending art, technology, and performance.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://compform.net/sound/" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="Research/Compform.png" alt="compform.net/sound/, Computer Formalisms, n.d.">
+              <div class="caption">
+                <h2>compform.net/sound/, Computer Formalisms, n.d.</h2>
+                <p>This site provides interactive p5.js sketches and templates that explore the relationship between code, sound, and visual expression. It features live examples and editable code which users can experiment with through sound triggers, oscillators, audio visualizations, and interactivity. Designed for teaching and self-learning, the platform makes sound-based coding more accessible and hands-on by bridging digital sound art and generative design.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://www.ngv.vic.gov.au/exhibition/yayoi-kusama/" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="https://media.nga.gov.au/-0mHefaeAZQ3rg4rGHFmGLr1KS8=/adaptive-fit-in/1200x1200///national-gallery-of-australia/media/dd/images/kusamainfinity_1000px.jpg" alt="Infinity Mirror Room, Kusama, 2017">
+              <div class="caption">
+                <h2>Infinity Mirror Room, Kusama, 2017</h2>
+                <p>Yayoi Kusama is a Japanese contemporary artist best known for her immersive Infinity Mirror Rooms, which use mirrors, lights, and repetition to create the illusion of endless space. These installations surround visitors with mirrored surfaces and controlled lighting, inviting them to become part of the artwork. Although not digital, the rooms engage viewers through sensory immersion and spatial perception, often incorporating timed access and controlled environments that align with themes of interaction and presence.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://www.youtube.com/watch?v=M1B3gATS0GE" target="_blank" style="text-decoration: none;">
+          <div class="gif-block">
+            <div class="gif-inner">
+              <img src="https://i.ytimg.com/an_webp/M1B3gATS0GE/mqdefault_6s.webp?du=3000&sqp=CJOZpsEG&rs=AOn4CLA2bhVT2DFNO5Mzn2dZpJD3ULMvpg" alt="Proud Parent Machine by Simone Giertz, 2020">
+              <div class="caption">
+                <h2>Proud Parent Machine by Simone Giertz, 2020</h2>
+                <p>Simone Giertz is a Swedish inventor and YouTuber known for building “shitty robots” — intentionally quirky, often hilarious machines that challenge perfectionism in tech. Her Proud Parent Machine is a heartwarming device that claps and cheers for you whenever you press a button, offering support like a proud parent might. Built with servos, a sound module, and basic physical computing tools, it playfully explores emotional interaction through robotics and self-made devices.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
